@@ -29,7 +29,7 @@ typedef struct	binary_tree_s bst_t;
 typedef struct	binary_tree_s avl_t;
 typedef struct	binary_tree_s heap_t;
 
-/* Helper functions */
+/* General Helper functions */
 void binary_tree_print(const binary_tree_t *);
 
 /* Task Functions (Mandatory) */
@@ -63,5 +63,6 @@ binary_tree_t *binary_tree_rotate_right(binary_tree_t *tree);
 
 /* Task Functions (Helper Functions) */
 void traverse_level(const binary_tree_t *node, int level, void(*func)(int));
+int is_complete(const binary_tree_t *tree, int index, int size);
 
 #endif /* BINARY_TREES_H */
