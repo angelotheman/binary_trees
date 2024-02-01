@@ -21,7 +21,7 @@ bst_t *array_to_bst(int *array, size_t size)
 	{
 		if (bst_insert(&root, array[i]) == NULL)
 		{
-			binary_tree_delete(root);
+			binary_delete(root);
 			return (NULL);
 		}
 	}
@@ -30,12 +30,12 @@ bst_t *array_to_bst(int *array, size_t size)
 }
 
 /**
- * binary_tree_delete - Deletes an entire binary tree
+ * binary_delete - Deletes an entire binary tree
  *
  * @tree: Pointer to the root of the tree to Delete
  */
 
-void binary_tree_delete(binary_tree_t *tree)
+void binary_delete(binary_tree_t *tree)
 {
 	if (tree == NULL)
 		return;
