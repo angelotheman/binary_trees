@@ -2,7 +2,6 @@
 #define BINARY_TREES_H
 
 /* Standard Libraries */
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <stddef.h>
@@ -60,9 +59,15 @@ void binary_tree_levelorder(const binary_tree_t *tree, void (*func)(int));
 int binary_tree_is_complete(const binary_tree_t *tree);
 binary_tree_t *binary_tree_rotate_left(binary_tree_t *tree);
 binary_tree_t *binary_tree_rotate_right(binary_tree_t *tree);
+int binary_tree_is_bst(const binary_tree_t *tree);
+bst_t *bst_insert(bst_t **tree, int value);
+bst_t *array_to_bst(int *array, size_t size);
+bst_t *bst_search(const bst_t *tree, int value);
+bst_t *bst_remove(bst_t *root, int value);
 
 /* Task Functions (Helper Functions) */
 void traverse_level(const binary_tree_t *node, int level, void(*func)(int));
 int is_complete(const binary_tree_t *tree, int index, int size);
+int is_bst_util(const binary_tree_t *tree, const binary_tree_t *prev);
 
 #endif /* BINARY_TREES_H */
