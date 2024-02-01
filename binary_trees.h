@@ -69,5 +69,7 @@ bst_t *bst_remove(bst_t *root, int value);
 void traverse_level(const binary_tree_t *node, int level, void(*func)(int));
 int is_complete(const binary_tree_t *tree, int index, int size);
 int is_bst_util(const binary_tree_t *tree, const binary_tree_t **prev);
+bst_t *bst_find_successor(bst_t *node);
+void binary_delete(binary_tree_t *tree);
 
 #endif /* BINARY_TREES_H */
