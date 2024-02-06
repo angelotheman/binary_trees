@@ -81,6 +81,7 @@ int is_complete(const binary_tree_t *tree, int index, int size);
 int is_bst_util(const binary_tree_t *tree, const binary_tree_t **prev);
 void binary_delete(binary_tree_t *tree);
 bst_t *bst_find_successor(bst_t *node);
-
+int binary_balance(const binary_tree_t *tree);
+avl_t *sorted_array_to_avl_helper(int *array, size_t start, size_t end);
 
 #endif /* BINARY_TREES_H */
